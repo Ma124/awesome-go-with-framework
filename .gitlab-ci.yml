@@ -1,0 +1,10 @@
+image: golang:latest
+
+stages:
+    - build
+
+compile:
+    stage: build
+    script:
+      - go get gitlab.com/Ma_124/awesome-framework
+      - awesome compile
