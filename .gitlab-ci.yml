@@ -7,13 +7,14 @@ stages:
 compile:
   stage: build
   script:
-    - echo apk add --update -t build-deps curl go git libc-dev gcc libgcc
     - go get gitlab.com/Ma_124/awesome-framework/cmd/awesome
     - $GOPATH/bin/awesome compile --gh-max-reqs 1
 
 pages:
   stage: deploy
   script:
+  - go get gitlab.com/Ma_124/awesome-framework/cmd/awesome
+  - $GOPATH/bin/awesome compile --gh-max-reqs 1
   - cp -r tmpl public
   artifacts:
     paths:
