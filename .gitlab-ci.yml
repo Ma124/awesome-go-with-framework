@@ -6,7 +6,5 @@ stages:
 compile:
     stage: build
     script:
-      - go get gitlab.com/Ma_124/awesome-framework
-      - go build -o awesome gitlab.com/Ma_124/awesome-framework
-      - chmod +x awesome
-      - ./awesome compile
+      - go get gitlab.com/Ma_124/awesome-framework/cmd/awesome
+      - $GOPATH/awesome compile
