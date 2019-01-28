@@ -1,0 +1,7 @@
+[[lists]]
+  [lists.input]
+  file="README.md"
+  format="md"
+  [lists.output]
+  file="tmpl/index.md"
+  format="md"

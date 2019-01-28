@@ -8,3 +8,15 @@ compile:
     script:
       - go get gitlab.com/Ma_124/awesome-framework/cmd/awesome
       - $GOPATH/bin/awesome compile
+
+pages:
+  stage: deploy
+  script:
+  - apk add --update -t build-deps curl go git libc-dev gcc libgcc
+  - cp -r tmpl public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
