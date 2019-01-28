@@ -2,6 +2,7 @@ image: golang:latest
 
 stages:
     - build
+    - deploy
 
 compile:
     stage: build
