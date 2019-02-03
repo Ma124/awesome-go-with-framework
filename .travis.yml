@@ -10,7 +10,7 @@ before_install:
 
 install:
   - $GOPATH/bin/awesome version
-  - $GOPATH/bin/awesome internal -gitlabci
+  - AWESOME_GITHUB_MAX_REQS=1 $GOPATH/bin/awesome internal -gitlabci
 
 deploy:
   provider: pages
