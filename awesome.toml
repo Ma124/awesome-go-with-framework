@@ -3,5 +3,5 @@
   file="README.md"
   format="md"
   [lists.output]
-  file="tmpl/index.md"
-  format="md"
+  file="tmpl/index.html"
+  format="md-html"
