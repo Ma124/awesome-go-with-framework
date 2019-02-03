@@ -6,6 +6,7 @@ pages:
   - go get gitlab.com/Ma_124/awesome-framework/cmd/awesome
   - $GOPATH/bin/awesome compile --gh-max-reqs 1
   - cp -r tmpl public
+  - cp tmpl/index.html public/index.html
   artifacts:
     paths:
     - public
