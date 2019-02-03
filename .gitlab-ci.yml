@@ -4,12 +4,10 @@ pages:
   stage: deploy
   script:
   - go get gitlab.com/Ma_124/awesome-framework/cmd/awesome
-  - $GOPATH/bin/awesome compile --gh-max-reqs 1
-  - cp -r tmpl public
-  - cp tmpl/index.html public/index.html
+  - $GOPATH/bin/awesome version
+  - $GOPATH/bin/awesome internal --gitlabci
   artifacts:
     paths:
     - public
   only:
   - master
-
