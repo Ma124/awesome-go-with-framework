@@ -5,11 +5,13 @@ go:
   
 sudo: false
 
-before_install:
+install:
   - go get gitlab.com/Ma_124/awesome-framework/cmd/awesome
 
-install:
+before_script:
   - $GOPATH/bin/awesome version
+
+script:
   - AWESOME_GITHUB_MAX_REQS=1 $GOPATH/bin/awesome internal -gitlabci
 
 deploy:
